@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header Responsive</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .logo {
+      height: 80px;
+      margin-left: -2rem;
+    }
+
+    @media (max-width: 991.98px) {
+      .logo {
+        height: 50px;
+      }
+      .logo2 {
+        height: 70px;
+        width: 300px;
+        margin-top: 10px;
+      }
+      .navbar {
+      position: relative;
+      height: 70px;
+      }
+    }
+
+    .logo-centre {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1050;
+      pointer-events: none; /* Pour éviter les clics dessus si besoin */
+    }
+
+    .navbar {
+      position: relative;
+     
+    }
+    /* Style normal par défaut (petits écrans) */
+.trapeze-menu {
+  background-color: transparent;
+  clip-path: none;
+  padding: 0;
+  color: white;
+  
+
+}
+
+/* À partir de lg (≥992px), trapèze rectangle incliné à gauche */
+@media (min-width: 992px) {
+  .trapeze-menu {
+    background-color:  #163d1e;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+    padding: 0rem;
+
+  }
+  .navbar-nav .nav-link {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+/* Couleur au survol */
+.navbar-nav .nav-link:hover .nav-link.active {
+  color: #66FF66;
+}
+}
+
+  </style>
+</head>
+<body>
+
+<header class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light container-fluid px-5 position-relative">
+    
+    <!-- Logo gauche -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="logoSimple-removebg-preview.png" alt="Logo Gauche" width="80" height="80"  class="logo">
+    </a>
+
+    <!-- Bouton burger -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu de navigation -->
+    <!-- Menu de navigation -->
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <div class="trapeze-menu px-5 py-3">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">À propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+    <!-- Logo central EN DEHORS du menu -->
+    <div class="logo-centre">
+      <img src="LogoLong.png" alt="Logo Centre" width="350" height="90" class="logo2">
+    </div>
+
+  </nav>
+</header>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
