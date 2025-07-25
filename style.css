@@ -480,7 +480,7 @@ h5 {
 
 
   .img-qui {
-    background-image: url(images/Design.png);
+    background-image: url(images/Design.webp);
 }
 .img-rse, .img-accueil, .img-prestation, .img-devis, .img-qui, .img-contact {
     background-position: center;
@@ -562,7 +562,7 @@ ul#ariane li:first-child::after {
   width: 100%;
 }
 .img-contact {
-    background-image:url(images/contact.png);
+    background-image:url(images/contact.webp);
 }
 .border, #googlemap {
     border: 1px solid #dee2e6 !important;
@@ -627,5 +627,49 @@ textarea {
     .card {
       padding: 1rem !important;
       margin-bottom: 1.5rem;
+    }
+  }
+.card-index h5 {
+    font-size: 1rem;
+    word-wrap: break-word;
+    line-height: 1.2;
+}
+
+  
+.section-clean {
+    background-color: #f4faf6;
+    color: #1f3a2e;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .section-clean h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .section-clean .highlight-line {
+    width: 60px;
+    height: 4px;
+    background-color: #4caf50;
+    margin: 0 auto 1.5rem;
+    border-radius: 4px;
+  }
+
+  .section-clean p {
+    font-size: 1.1rem;
+    color: #445c4c;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .section-clean h2 {
+      font-size: 1.7rem;
+    }
+
+    .section-clean p {
+      font-size: 1rem;
     }
   }
