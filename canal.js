@@ -22,3 +22,49 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+
+  const text = "COMMISSIONNAIRE AGRÉÉ EN DOUANE";
+  const el = document.getElementById("typewriter");
+  let index = 0;
+
+  el.textContent = ""; // On vide d'abord
+
+  function typeLetter() {
+    if (index < text.length) {
+      el.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeLetter, 80); // Vitesse de frappe
+    } else {
+      el.classList.add("finished"); // On ajoute la classe pour cacher le curseur
+    }
+  }
+
+  window.addEventListener("load", typeLetter);
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const refuseBtn = document.getElementById("refuse-cookies");
+    const closeBtn = document.getElementById("close-banner");
+
+    const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+
+    if (cookiesAccepted !== "true") {
+      banner.style.display = "block";
+    }
+
+    acceptBtn.addEventListener("click", () => {
+      localStorage.setItem("cookiesAccepted", "true");
+      banner.style.display = "none";
+    });
+
+    function refuse() {
+      localStorage.removeItem("cookiesAccepted");
+      banner.style.display = "none";
+    }
+
+    refuseBtn.addEventListener("click", refuse);
+    closeBtn.addEventListener("click", refuse);
+  });
+
